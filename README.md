@@ -37,3 +37,12 @@ With the current settings:
 
 ## Known limitations:
 * Reducing time intervals will result in keystrokes missing.
+* Current version only supports arrow keys.
+* Text file formatting should look like this.
+
+
+    1.upupup
+    4.upleftleft
+    7.downleftdown
+    10.rightdowndown
+    13.rightupup

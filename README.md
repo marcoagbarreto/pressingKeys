@@ -16,6 +16,7 @@ dependencies:
     import random
     import numpy as np
     import re
+    import pyperclip
 
 or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys/archive/main.zip) into your project folder.
 

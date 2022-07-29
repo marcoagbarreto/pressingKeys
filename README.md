@@ -38,7 +38,7 @@ With the current settings:
 ## Known limitations:
 * Reducing time intervals will result in keystrokes missing.
 * Current version only supports arrow keys.
-* Text file formatting should look like this.
+* Text file formatting should look like this:
 
 ``` python
     1.upupup

@@ -2,7 +2,7 @@
 Title:
 Description: This is a program to press keys given a text file
 Author: Marco A. Barreto - marcoagbarreto
-Version: 28-07-2022
+Version: 29-07-2022
 """
 
 try:
@@ -12,6 +12,7 @@ try:
     import random
     import numpy as np
     import re
+    import pyperclip
 except ImportError as details:
     print("-E- Couldn't import module, try pip install 'module'")
     raise details
@@ -27,14 +28,8 @@ def key_press(key):
 class PressingKeys:
     def __init__(self, file):
 
-        self.keyList = None
-        self.file = file
-        self.read_text()
-
-    def read_text(self):
-        with open(self.file, 'r') as file:
-            self.keyList = file.read()
-        return self.parse_text()
+        self.keyList = file
+        self.parse_text()
 
     def parse_text(self):
         self.keyList = self.keyList.replace('\n', '')
@@ -67,6 +62,7 @@ class PressingKeys:
         keyboard.wait(starter)
         print("Started, press", ["Q"], "to abort.")
 
+        t0 = time.time()
         # Starts pressing keys
         for key in self.keyList:
             if key:
@@ -75,26 +71,26 @@ class PressingKeys:
                 print('Aborted')
                 break
 
+        t1 = time.time()
         print('Finished')
+        print('Time delayed:', int(t1 - t0), 's')
+
+
+
+def main():
+    copykey = 'ctrl+c'
+    restartkey = 'shift'
+
+    while True:
+        print('Waiting for items in the clipboard, use', [copykey], 'to copy the key list')
+        keyboard.wait(copykey)
+        time.sleep(0.1)  # Sleep 0.1 s so clipboard can refresh
+
+        PressingKeys(pyperclip.paste()).run()
+
+        print('Press', [restartkey], 'to start again.')
+        keyboard.wait(restartkey)
 
 
 if __name__ == '__main__':
-
-    file_name = 'keyList.txt'
-
-    try:
-        if os.stat(file_name).st_size > 0:
-            print("Found ", file_name)
-        else:
-            print("Empty file", file_name)
-    except FileNotFoundError:
-        print('Missing, creating file ', file_name)
-        f = open(file_name, "a")
-        f.close()
-
-    t0 = time.time()
-    PressingKeys(file_name).run()
-    t1 = time.time()
-    print('Time delayed:', int(t1 - t0), 's')
-    print('Close the window to exit.')
-    keyboard.wait()
+    main()

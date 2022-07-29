@@ -1,3 +1,10 @@
+"""
+Title:
+Description: This is a program to press keys given a text file
+Author: Marco A. Barreto - marcoagbarreto
+Version: 28-07-2022
+"""
+
 try:
     import os
     import time

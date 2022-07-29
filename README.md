@@ -21,24 +21,24 @@ or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys
 
 ## Example
 
-1. Create a ```"keyList.txt"``` file.
-2. Copy your commands into the ```"keyList.txt"``` file and save it.
-3. Run ```pressingKeys.exe``` or ```pressingKeys.py```
-4. Make focus on the desired app.
-5. Press ```[Ctrl]``` to run the program.
-6. Profit.
+1. Run ```pressingKeys.exe``` or ```pressingKeys.py```
+2. Copy the key list
+3. Make focus on the desired app.
+4. Press ```[Ctrl]``` to run the program.
+5. Profit.
+6. Restart the program with ```[Shift]```
 
 You can find a ```"keyList.txt"``` in this repo that you can use for testing.
 
 With the current settings:
-100 keys = 20+- 5s
+100 keys = 10+- 5s
 
 ![example](example.gif)
 
 ## Known limitations:
 * Reducing time intervals will result in keystrokes missing.
 * Current version only supports arrow keys.
-* Text file formatting should look like this:
+* Input formatting should look like this:
 
 ``` notepadd++
     1.upupup

@@ -82,14 +82,18 @@ def main():
     restartkey = 'shift'
 
     while True:
+        # Copy the key list
         print('Waiting for items in the clipboard, use', [copykey], 'to copy the key list')
         keyboard.wait(copykey)
         time.sleep(0.1)  # Sleep 0.1 s so clipboard can refresh
 
+        # Run the program
         PressingKeys(pyperclip.paste()).run()
 
+        # Restart the program
         print('Press', [restartkey], 'to start again.')
         keyboard.wait(restartkey)
+        os.system('cls' if os.name == 'nt' else 'clear')
 
 
 if __name__ == '__main__':

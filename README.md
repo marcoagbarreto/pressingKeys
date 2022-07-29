@@ -40,9 +40,10 @@ With the current settings:
 * Current version only supports arrow keys.
 * Text file formatting should look like this.
 
-
+``` python
     1.upupup
     4.upleftleft
     7.downleftdown
     10.rightdowndown
     13.rightupup
+```

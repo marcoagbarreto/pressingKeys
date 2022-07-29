@@ -2,7 +2,7 @@
 This is a program to press keys given a text file.
 
 ## Usage 
-Download the pressingKeys.exe from releases:
+Download the [pressingKeys.exe](https://github.com/marcoagbarreto/pressingKeys/releases/download/v0.1.0/pressingKeys.exe) from releases:
 
 or clone the repository (no installation required, source files are sufficient):
         

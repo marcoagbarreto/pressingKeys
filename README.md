@@ -23,7 +23,7 @@ or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys
 
 1. Create a ```"keyList.txt"``` file.
 2. Copy your commands into the ```"keyList.txt"``` file and save it.
-3. Run ```pressingKeys.exe``` or ```pressingKeys..py```
+3. Run ```pressingKeys.exe``` or ```pressingKeys.py```
 4. Make focus on the desired app.
 5. Press ```[Ctrl]``` to run the program.
 6. Profit.

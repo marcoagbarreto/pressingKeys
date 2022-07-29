@@ -23,7 +23,7 @@ or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys
 ## Example
 
 1. Run ```pressingKeys.exe``` or ```pressingKeys.py```
-2. Copy the key list
+2. Copy the key list with ```[Ctrl+C]```
 3. Make focus on the desired app.
 4. Press ```[Ctrl]``` to run the program.
 5. Profit.

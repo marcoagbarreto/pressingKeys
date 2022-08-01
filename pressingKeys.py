@@ -1,6 +1,6 @@
 """
-Title:
-Description: This is a program to press keys given a text file
+Title: pressingKeys
+Description: This is a program to press keys given some text.
 Author: Marco A. Barreto - marcoagbarreto
 Version: 1-Aug-2022
 """
@@ -83,7 +83,7 @@ def main():
 
     while True:
         # Copy the key list
-        print('Waiting for items in the clipboard, use', [copykey], 'to copy the key list')
+        print('Waiting for items in the clipboard, use', [copykey], 'to copy the key list.')
         keyboard.wait(copykey)
         time.sleep(0.1)  # Sleep 0.1 s so clipboard can refresh
 

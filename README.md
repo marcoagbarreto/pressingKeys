@@ -1,24 +1,7 @@
 # pressingKeys
-This is a program to press keys given a text file.
+This is a program to press keys given some text.
 
-## Usage 
-Download the [pressingKeys.exe](https://github.com/marcoagbarreto/pressingKeys/releases/download/v0.2.0/pressingKeys.exe) from releases:
-
-or clone the repository (no installation required, source files are sufficient):
-        
-    https://github.com/marcoagbarreto/pressingKeys.git
-
-dependencies:
-
-    import os
-    import time
-    import keyboard
-    import random
-    import numpy as np
-    import re
-    import pyperclip
-
-or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys/archive/main.zip) into your project folder.
+* Download the latest release of [pressingKeys.exe](https://github.com/marcoagbarreto/pressingKeys/releases/download/v0.2.0/pressingKeys.exe).
 
 ## Example
 
@@ -35,6 +18,24 @@ With the current settings:
 100 keys = 10+- 5s
 
 ![example](example.gif)
+
+## Code Usage
+
+clone the repository (no installation required, source files are sufficient):
+        
+    https://github.com/marcoagbarreto/pressingKeys.git
+
+dependencies:
+
+    import os
+    import time
+    import keyboard
+    import random
+    import numpy as np
+    import re
+    import pyperclip
+
+or [download and extract the zip](https://github.com/marcoagbarreto/pressingKeys/archive/main.zip) into your project folder.
 
 ## Known limitations:
 * Reducing time intervals will result in keystrokes missing.

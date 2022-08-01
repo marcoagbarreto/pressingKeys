@@ -2,7 +2,7 @@
 Title:
 Description: This is a program to press keys given a text file
 Author: Marco A. Barreto - marcoagbarreto
-Version: 29-07-2022
+Version: 1-Aug-2022
 """
 
 try:
@@ -19,7 +19,7 @@ except ImportError as details:
 
 
 def key_press(key):
-    time.sleep(0.07)  # sleeps to avoid key ghosting from previous key press
+    time.sleep(np.random.uniform(0.07, 0.09))  # sleeps to avoid key ghosting from previous key press
     keyboard.press(key)
     time.sleep(np.random.uniform(0.05, 0.07))  # sleeps between 0.05 and 0.07 seconds to simulate natural pressing
     keyboard.release(key)

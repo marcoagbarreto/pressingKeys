@@ -57,17 +57,18 @@ class PressingKeys:
         # Show the amount of keys to press
         print('Keys to press: ', len(self.keyList))
 
-        starter = 'ctrl'
-        print("Press ", [starter], " to start.")
-        keyboard.wait(starter)
-        print("Started, press", ["Q"], "to abort.")
+        starterkey = 'Ctrl'
+        abortkey = 'Q'
+        print("Press ", [starterkey], " to start.")
+        keyboard.wait(starterkey)
+        print("Started, press", [abortkey], "to abort.")
 
         t0 = time.time()
         # Starts pressing keys
         for key in self.keyList:
             if key:
                 key_press(key)
-            if keyboard.is_pressed('q'):
+            if keyboard.is_pressed(abortkey):
                 print('Aborted')
                 break
 
@@ -78,8 +79,8 @@ class PressingKeys:
 
 
 def main():
-    copykey = 'ctrl+c'
-    restartkey = 'shift'
+    copykey = 'Ctrl+C'
+    restartkey = 'Shift'
 
     while True:
         # Copy the key list

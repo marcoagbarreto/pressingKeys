@@ -30,7 +30,7 @@ dependencies:
     import os
     import time
     import keyboard
-    import numpy as np
+    import numpy
     import re
     import pyperclip
 

@@ -88,9 +88,13 @@ def main():
     copykey = 'Ctrl+C'
     restartkey = 'Shift'
 
+    # Set terminal size to optimal size
+    os.system("mode con cols=37 lines=12")
+
     while True:
         # Copy the key list
-        print('Waiting for items in the clipboard, use', [copykey], 'to copy the key list.')
+        print('Waiting for items in the clipboard,\nuse',
+              [copykey], 'to copy the key list.')
         keyboard.wait(copykey)
         time.sleep(0.1)  # Sleep 0.1 s so clipboard can refresh
 

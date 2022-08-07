@@ -2,14 +2,13 @@
 Title: pressingKeys
 Description: This is a program to press keys given some text.
 Author: Marco A. Barreto - marcoagbarreto
-Version: 1-Aug-2022
+Version: 8-Aug-2022
 """
 
 try:
     import os
     import time
     import keyboard
-    import random
     import numpy as np
     import re
     import pyperclip
@@ -19,9 +18,11 @@ except ImportError as details:
 
 
 def key_press(key):
-    time.sleep(np.random.uniform(0.07, 0.09))  # sleeps to avoid key ghosting from previous key press
+    # sleeps to avoid key ghosting from previous key press
+    time.sleep(np.random.uniform(0.07, 0.09))
     keyboard.press(key)
-    time.sleep(np.random.uniform(0.05, 0.07))  # sleeps between 0.05 and 0.07 seconds to simulate natural pressing
+    # sleeps between 0.05 and 0.07 seconds to simulate natural pressing
+    time.sleep(np.random.uniform(0.05, 0.07))
     keyboard.release(key)
 
 
@@ -39,28 +40,34 @@ class PressingKeys:
         return self.key_maps()
 
     def key_maps(self):
-        for i in range(len(self.keyList)):
-            if self.keyList[i] == 'left':
-                self.keyList[i] = 'right'
+        # Map keys to match inverted logic
+        for index, key in enumerate(self.keyList):
+            if key == 'left':
+                self.keyList[index] = 'right'
 
-            elif self.keyList[i] == 'right':
-                self.keyList[i] = 'left'
+            elif key == 'right':
+                self.keyList[index] = 'left'
 
-            elif self.keyList[i] == 'up':
-                self.keyList[i] = 'down'
+            elif key == 'up':
+                self.keyList[index] = 'down'
 
-            elif self.keyList[i] == 'down':
-                self.keyList[i] = 'up'
+            elif key == 'down':
+                self.keyList[index] = 'up'
+
+        # Remove empty items in the list
+        for index, key in enumerate(self.keyList):
+            if key == '':
+                del self.keyList[index]
 
     def run(self):
         print('Ensure to have focus on the app.')
         # Show the amount of keys to press
         print('Keys to press: ', len(self.keyList))
 
-        starterkey = 'Ctrl'
+        startkey = 'Ctrl'
         abortkey = 'Q'
-        print("Press ", [starterkey], " to start.")
-        keyboard.wait(starterkey)
+        print("Press ", [startkey], " to start.")
+        keyboard.wait(startkey)
         print("Started, press", [abortkey], "to abort.")
 
         t0 = time.time()
@@ -75,7 +82,6 @@ class PressingKeys:
         t1 = time.time()
         print('Finished')
         print('Time delayed:', int(t1 - t0), 's')
-
 
 
 def main():

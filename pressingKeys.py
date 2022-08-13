@@ -89,10 +89,15 @@ def main():
     restartkey = 'Shift'
 
     # Set terminal size to optimal size
-    os.system("mode con cols=37 lines=12")
+    os.system('mode con cols=37 lines=12')
 
     # Set terminal to be always on top
-    os.system('Powershell.exe -ExecutionPolicy UnRestricted -Command "(Add-Type -memberDefinition \\"[DllImport(\\"\\"user32.dll\\"\\")] public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, int x,int y,int cx, int xy, uint flagsw);\\" -name \\"Win32SetWindowPos\\" -passThru )::SetWindowPos((Add-Type -memberDefinition \\"[DllImport(\\"\\"Kernel32.dll\\"\\")] public static extern IntPtr GetConsoleWindow();\\" -name \\"Win32GetConsoleWindow\\" -passThru )::GetConsoleWindow(),-1,0,0,0,0,67)"')
+    os.system('Powershell.exe -ExecutionPolicy UnRestricted -Command "(Add-Type -memberDefinition \\"[DllImport('
+              '\\"\\"user32.dll\\"\\")] public static extern bool SetWindowPos(IntPtr hWnd, IntPtr hWndInsertAfter, '
+              'int x,int y,int cx, int xy, uint flagsw);\\" -name \\"Win32SetWindowPos\\" -passThru )::SetWindowPos(('
+              'Add-Type -memberDefinition \\"[DllImport(\\"\\"Kernel32.dll\\"\\")] public static extern IntPtr '
+              'GetConsoleWindow();\\" -name \\"Win32GetConsoleWindow\\" -passThru )::GetConsoleWindow(),-1,0,0,0,0,'
+              '67)"')
 
     # Clear the terminal after last command
     os.system('cls' if os.name == 'nt' else 'clear')

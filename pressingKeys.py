@@ -2,7 +2,7 @@
 Title: pressingKeys
 Description: This is a program to press keys given some text.
 Author: Marco A. Barreto - marcoagbarreto
-Version: 8-Aug-2022
+Version: 13-Aug-2022
 """
 
 try:

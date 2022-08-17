@@ -8,7 +8,8 @@ Version: 13-Aug-2022
 try:
     from os import system as os_system, name as os_name
     from time import sleep as time_sleep, time as time_time
-    from keyboard import press as keyboard_press, release as keyboard_release, is_pressed as keyboard_is_pressed, wait as keyboard_wait
+    from keyboard import press as keyboard_press, release as keyboard_release, \
+        is_pressed as keyboard_is_pressed, wait as keyboard_wait
     from random import uniform as random_uniform
     from re import sub as re_sub, findall as re_findall
     from pyperclip import paste as pyperclip_paste
